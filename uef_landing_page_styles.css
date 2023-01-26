@@ -283,6 +283,8 @@ footer {
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+
 }
 
 .footer-option h2 {
@@ -290,6 +292,7 @@ footer {
     padding-bottom: 0;
     font-family: 'Montserrat';
     font-weight: 300;
+    font-size: 1.3rem;
 }
 
 .footer-option a {
@@ -496,7 +499,7 @@ footer {
         letter-spacing: normal;
         text-decoration: none;
         color: white;
-        font-size: 1.0em;
+        font-size: 1.0rem;
     }
     
     .copyright {
