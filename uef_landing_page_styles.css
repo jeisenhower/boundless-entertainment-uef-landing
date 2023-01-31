@@ -96,13 +96,32 @@ ul li .dropbtn {
 .logo {
     flex: 1;
     background-color: whitesmoke;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo div {
+    width: 75%;
+    height: auto;
 }
 
 .options {
     flex: 1;
     background-color: whitesmoke;
 }
+
+.nav-link:visited {
+    color: #001116;
+    text-decoration: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #001116;
+}
+
+
 
 
 /*------------BODY----------------------*/
