@@ -9,7 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="uef_landing_page_styles.css">
+        <!-- <link rel="stylesheet" href="uef_landing_page_styles.css"> -->
+        <link rel="stylesheet" href="uef_landing_page_lazy_load_styles.css">
         <link rel="icon" type="image/png" href="uef_landing_page_img/favicon.png">
         <!-- Website share thumbnail setup -->
         <meta property='og:title' content='Boundless-Resource.com'/>
@@ -221,18 +222,19 @@
 
             <h1>WHAT STUDENTS ARE CREATING</h1>
             <div class="examples-container">
-                <div class="example-video" data-embed="lJocYzWl-BQ">
-                    <!-- <div class="play-button"></div> -->
-                    <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="example-video youtube" data-embed="lJocYzWl-BQ">
+                    <div class="play-button"></div>
+                    <!-- <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
                 <div style="flex: 1 25px;"></div>
-                <div class="example-video" data-embed="e5AnYiqJCP4">
-                    <!-- <div class="play-button"></div> -->
-                    <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="example-video youtube" data-embed="e5AnYiqJCP4">
+                    <div class="play-button"></div>
+                    <!-- <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
             </div>
-            <div id="example-video-bottom">
-                <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="youtube" id="example-video-bottom" data-embed="zqd18XR8hBI">
+                <div class="play-button"></div>
+                <!-- <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
         </div>
 
@@ -272,14 +274,21 @@
             const hamburger = document.querySelector(".hamburger");
             const optionsMenu = document.querySelector(".options");
             //const navLinks = document.querySelectorAll(".nav-link");
+            const videos = document.querySelectorAll( ".youtube" );
+
+            for (var i = 0; i < videos.length; i++) { 
+                var source = "https://img.youtube.com/vi/"+ videos[i].dataset.embed +"/sddefault.jpg";
+	            // Load the image asynchronously 
+	            var image = new Image();
+		        image.src = source;
+		        image.addEventListener("load", function() {
+			        videos[ i ].appendChild( image );
+		        }(i));
+            }
 
             //navLinks.forEach(link => link.addEventListener("click", closeMenu));
 
             hamburger.addEventListener("click", displayMobileMenu);
-
-            function expand() {
-
-            }
             
             function displayMobileMenu() {
                 hamburger.classList.toggle("active");
