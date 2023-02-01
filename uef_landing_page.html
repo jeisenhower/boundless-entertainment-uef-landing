@@ -224,17 +224,17 @@
             <div class="examples-container">
                 <div class="example-video youtube" data-embed="lJocYzWl-BQ">
                     <div class="play-button"></div>
-                    <!-- <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <!-- <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" loading="lazy" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
                 <div style="flex: 1 25px;"></div>
                 <div class="example-video youtube" data-embed="e5AnYiqJCP4">
                     <div class="play-button"></div>
-                    <!-- <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <!-- <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" loading="lazy" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
             </div>
             <div class="youtube" id="example-video-bottom" data-embed="zqd18XR8hBI">
                 <div class="play-button"></div>
-                <!-- <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                <!-- <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" loading="lazy" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
         </div>
 
@@ -284,6 +284,16 @@
 		        image.addEventListener("load", function() {
 			        videos[ i ].appendChild( image );
 		        }(i));
+
+                videos[i].addEventListener( "click", function() {
+		            var iframe = document.createElement( "iframe" );
+			        iframe.setAttribute( "frameborder", "0" );
+			        iframe.setAttribute( "allowfullscreen", "" );
+                    iframe.setAttribute("autoplay", "");
+			        iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1" );
+			        this.innerHTML = "";
+			        this.appendChild( iframe );
+	            });
             }
 
             //navLinks.forEach(link => link.addEventListener("click", closeMenu));
@@ -294,6 +304,7 @@
                 hamburger.classList.toggle("active");
                 optionsMenu.classList.toggle("active");
             }
+
             // function closeMenu() {
             //     hamburger.classList.remove("active");
             //     optionsMenu.classList.remove("active");
