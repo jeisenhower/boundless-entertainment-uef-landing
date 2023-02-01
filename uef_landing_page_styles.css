@@ -175,6 +175,7 @@ ul li {
     margin: 35px;
 }
 
+
 #video-container {
     overflow: hidden;
     margin-bottom: 50px;
@@ -185,6 +186,43 @@ ul li {
 }
 
 #video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.examples-container {
+    display: flex;
+    padding-top: 25px;
+    margin-bottom: 50px;
+}
+
+.example-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4 100px;
+}
+
+.example-video iframe {
+    height: 791px;
+    width: 445px;
+}
+
+#example-video-bottom {
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#example-video-bottom iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -365,46 +403,6 @@ ul li {
     text-decoration: none;
 }
 
-.examples-container {
-    display: flex;
-    padding-top: 25px;
-    margin-bottom: 50px;
-}
-
-.example-video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 4 100px;
-}
-
-.example-video iframe {
-    height: 791px;
-    width: 445px;
-}
-
-#example-video-bottom {
-    /* width: 100%; */
-    overflow: hidden;
-    margin-bottom: 50px;
-    position: relative;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    height: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#example-video-bottom iframe {
-    /* width: 560px;
-    height: 315px; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 footer {
     margin-top: 50px;
     background-color: #001621;
@@ -486,6 +484,13 @@ footer {
         cursor: pointer;
     }
 
+    .dropbtn:first-child {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    
+
     /* -------------Changes the look of the hamburger menu bars------------*/
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -511,14 +516,8 @@ footer {
         position: fixed;
         height: 55vh;
         width: 50vw;
-        /* left: -100%; */
         right: 100%;
         background-color: whitesmoke;
-        /* display: none; */
-        /* display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 1 100px; */
     }
 
     .options .active {
@@ -547,13 +546,8 @@ footer {
         align-items: flex-start;
     }
 
-    /*.dropbtn {
-        display: none;
-    }*/
-
     .nav-bar ul div {
-        background-color: whi       
-        /* border: red 3.0px solid; */;
+        background-color: whitesmoke;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -561,21 +555,10 @@ footer {
     .nav-bar ul div li {
         display: flex;
         flex-direction: column;
-        /* padding: 0; */
         font-size: 1.3rem;
         align-self: flex-start;
         background-color: whitesmoke;
     }
-
-    /*.dropdown-content a {
-        text-decoration: none;
-        color: #001116;;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 10px;
-        font-weight: 200;
-        background-color: whitesmoke;
-    }*/
 
 
     /*------------BODY------------------------*/
@@ -826,14 +809,8 @@ footer {
         position: fixed;
         height: 55vh;
         width: 100vw;
-        /* left: -100%; */
         right: 100%;
         background-color: whitesmoke;
-        /* display: none; */
-        /* display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 1 100px; */
     }
 
     .options .active {
@@ -853,7 +830,6 @@ footer {
     }
 
     .options ul {
-        /* border: black 4.0px solid; */
         position: fixed;
         background-color: whitesmoke;
         display: flex;
@@ -864,8 +840,7 @@ footer {
     }
 
     .nav-bar ul div {
-        background-color: whi       
-        /* border: red 3.0px solid; */;
+        background-color: whitesmoke;       
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -873,7 +848,6 @@ footer {
     .nav-bar ul div li {
         display: flex;
         flex-direction: column;
-        /* padding: 0; */
         font-size: 1.0rem;
         align-self: flex-start;
         background-color: whitesmoke;

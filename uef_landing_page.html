@@ -21,24 +21,6 @@
         <meta property='og:type' content='website'/>
         <title>Unreal Engine for Filmmakers Course | Boundless Entertainment</title>
         <meta name="description" content="Learn to create cinematic, Hollywood-level visual effects using free, cutting-edge software in just 10 days with the Unreal Engine for Filmmakers course. Enroll now."/>
-        <!-- Facebook Pixel Code -->
-        <script>
-            !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '458945659498620');
-          fbq('track', 'PageView');
-        </script>
-        <noscript>
-            <img height="1" width="1" style="display:none"
-               src="https://www.facebook.com/tr?id=458945659498620&ev=PageView&noscript=1"/>
-        </noscript>
-        <!-- End Facebook Pixel Code -->
     </head>
     
     <body>
@@ -57,14 +39,6 @@
                     </div>
                     <div class="dropdown">
                         <li>
-                            <!-- <div>
-                                <button onclick="expand()" class="dropbtn"><a class="nav-link">COURSES</a></button>
-                                <div class="dropdown-content">
-                                    <a class="nav-link" href="">COURSE CATALOG</a>
-                                    <a class="nav-link" href="">COURSE BUNDLES</a>
-                                    <a class="nav-link" href="">MEMBERSHIPS</a>
-                                </div>
-                            </div> -->
                             <a href="https://boundless-resource.com/courses-2/" class="nav-link">COURSES</a>
                         </li>
                     </div>
@@ -77,7 +51,7 @@
                     <div class="dropdown">
                         <li>
                             <div>
-                                <button onclick="expand()" class="dropbtn"><a href="https://boundless-resource.com/about-us/" class="nav-link">ABOUT US <i class="fa fa-caret-down"></i></a></button>
+                                <button class="dropbtn"><a href="https://boundless-resource.com/about-us/" class="nav-link">ABOUT US <i class="fa fa-caret-down"></i></a></button>
                                 <div id="myDropdown" class="dropdown-content">
                                     <a class="nav-link" href="https://boundless-resource.com/sameisenhower/">ON-SET SERVICES</a>
                                 </div>
@@ -105,8 +79,8 @@
             </div>
             <hr>
             <div id="video-container">
+                <!-- <div class="play-button"></div> -->
                 <iframe height="100%" width="100%" src="https://youtube.com/embed/DZYYjXp5Uf0?controls=1&amp;rel=0&amp;modestbranding=1&amp;autoplay=1" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
-                <!-- <iframe src="https://iframe.mediadelivery.net/embed/21811/9b134c0e-0eb3-49ad-a750-1ea3dcd39cf0?autoplay=true" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe> -->
             </div>
             <button class="button" onclick="enrollNav()">ENROLL NOW</button>
             <div class="paragraph-container">
@@ -247,17 +221,18 @@
 
             <h1>WHAT STUDENTS ARE CREATING</h1>
             <div class="examples-container">
-                <div class="example-video">
+                <div class="example-video" data-embed="lJocYzWl-BQ">
+                    <!-- <div class="play-button"></div> -->
                     <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div style="flex: 1 25px;"></div>
-                <div class="example-video">
+                <div class="example-video" data-embed="e5AnYiqJCP4">
+                    <!-- <div class="play-button"></div> -->
                     <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
             <div id="example-video-bottom">
                 <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <!-- <iframe src="https://iframe.mediadelivery.net/embed/21811/e097fb07-32ef-45f8-9dd5-4da936c6997d?autoplay=true" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe> -->
             </div>
         </div>
 
@@ -301,18 +276,46 @@
             //navLinks.forEach(link => link.addEventListener("click", closeMenu));
 
             hamburger.addEventListener("click", displayMobileMenu);
+
+            function expand() {
+
+            }
             
             function displayMobileMenu() {
                 hamburger.classList.toggle("active");
                 optionsMenu.classList.toggle("active");
             }
-            function closeMenu() {
-                hamburger.classList.remove("active");
-                optionsMenu.classList.remove("active");
-            }
+            // function closeMenu() {
+            //     hamburger.classList.remove("active");
+            //     optionsMenu.classList.remove("active");
+            // }
             function enrollNav() {
                 window.location.href = 'https://boundless-resource.com/purchase/?plan=4461';
             }
         </script>
+        <!-- Facebook Pixel Code -->
+        <script nonce="gr4QlzpkSN">
+            setTimeout(function() {
+                !function (f, b, e, v, n, t, s) {
+                    if (f.fbq) return; n = f.fbq = function () {
+                        n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                    n.queue = []; t = b.createElement(e); t.async = !0;
+                    t.src = v; s = b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s)
+                }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '458945659498620');
+                fbq('track', 'PageView');
+            }, 3000);
+        </script>
+        <noscript>
+            <img class="pixel" height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=458945659498620&ev=PageView&noscript=1"/>
+        </noscript>
+        <style nonce="gr4QlzpkSN">.pixel{display: none;}</style>
+        <!-- End Facebook Pixel Code -->
     </body>
 </html>
