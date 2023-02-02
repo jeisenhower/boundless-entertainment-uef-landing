@@ -277,7 +277,8 @@
             const videos = document.querySelectorAll( ".youtube" );
 
             for (var i = 0; i < videos.length; i++) { 
-                var source = "https://img.youtube.com/vi/"+ videos[i].dataset.embed +"/sddefault.jpg";
+                //var source = "https://img.youtube.com/vi/"+ videos[i].dataset.embed +"/sddefault.jpg";
+                var source = "uef_landing_page_img/" + videos[i].dataset.embed + ".jpg";
 	            // Load the image asynchronously 
 	            var image = new Image();
 		        image.src = source;

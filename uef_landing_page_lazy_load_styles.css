@@ -236,8 +236,10 @@ ul li {
 }
 
 .example-video img {
-    height: 100%;
-    width: 100%;
+    height: 791px;
+    width: 445px;
+    /* height: 100%;
+    width: 100%; */
 }
 
 .example-video img,
@@ -255,10 +257,10 @@ ul li {
 } 
 
 .example-video iframe {
-    /* height: 791px;
-    width: 445px; */
-    height: 100%;
-    width: 100%;
+    height: 791px;
+    width: 445px;
+    /* height: 100%;
+    width: 100%; */
 }
 
 #example-video-bottom {
@@ -773,11 +775,16 @@ footer {
     
     .example-video {
         min-height: 560px;
-        /* width: 315px; */
+        width: 315px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 4 100px;
+    }
+
+    .example-video img {
+        height: 560px;
+        width: 315px;
     }
     
     .example-video iframe {
