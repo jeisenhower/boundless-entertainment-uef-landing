@@ -2,14 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale"> -->
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="uef_landing_page_styles.css"> -->
         <link rel="stylesheet" href="uef_landing_page_lazy_load_styles.css">
         <link rel="icon" type="image/png" href="uef_landing_page_img/favicon.png">
         <!-- Website share thumbnail setup -->
@@ -83,8 +81,6 @@
             </div>
             <hr>
             <div id="video-container">
-                <!-- <div class="play-button"></div> -->
-                <!-- <iframe height="100%" width="100%" src="https://youtube.com/embed/DZYYjXp5Uf0?controls=1&amp;rel=0&amp;modestbranding=1&amp;autoplay=1" allow="autoplay;" frameborder="0" allowfullscreen></iframe> -->
                 <iframe height="100%", width="100%" src="https://iframe.mediadelivery.net/embed/21811/9b134c0e-0eb3-49ad-a750-1ea3dcd39cf0?autoplay=true" loading="lazy" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
             </div>
             <button class="button" onclick="enrollNav()">ENROLL NOW</button>
@@ -226,22 +222,16 @@
 
             <h1>WHAT STUDENTS ARE CREATING</h1>
             <div class="examples-container">
-                <!-- <div class="example-video youtube" data-embed="lJocYzWl-BQ"> -->
                 <div class="example-video youtube" data-embed="21811/c37ec34a-13e0-4857-9cc9-64df98de2f15">
                     <div class="play-button"></div>
-                    <!-- <iframe src="https://www.youtube.com/embed/lJocYzWl-BQ?rel=0&amp;modestbranding=1" loading="lazy" title="Kolder Contest Submission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
                 <div style="flex: 1 25px;"></div>
-                <!-- <div class="example-video youtube" data-embed="e5AnYiqJCP4"> -->
                 <div class="example-video youtube" data-embed="21811/72feeecd-8a53-429f-958a-449422ddad36">
                     <div class="play-button"></div>
-                    <!-- <iframe src="https://www.youtube.com/embed/e5AnYiqJCP4?rel=0&amp;modestbranding=1" loading="lazy" title="The Towers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
             </div>
-            <!-- <div class="youtube" id="example-video-bottom" data-embed="zqd18XR8hBI"> -->
             <div class="youtube" id="example-video-bottom" data-embed="21811/e097fb07-32ef-45f8-9dd5-4da936c6997d">
                 <div class="play-button"></div>
-                <!-- <iframe src="https://www.youtube.com/embed/zqd18XR8hBI?rel=0&amp;modestbranding=1" loading="lazy" title="Beautiful Day" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
         </div>
 
@@ -280,13 +270,11 @@
         <script>
             const hamburger = document.querySelector(".hamburger");
             const optionsMenu = document.querySelector(".options");
-            //const navLinks = document.querySelectorAll(".nav-link");
             const videos = document.querySelectorAll( ".youtube" );
 
             for (var i = 0; i < videos.length; i++) { 
-                //var source = "https://img.youtube.com/vi/"+ videos[i].dataset.embed +"/sddefault.jpg";
                 var source = "uef_landing_page_img/" + videos[i].dataset.embed + ".webp";
-	            // Load the image asynchronously 
+	            // Load the image  
 	            var image = new Image();
 		        image.src = source;
 		        image.addEventListener("load", function() {
@@ -297,17 +285,13 @@
 		            var iframe = document.createElement( "iframe" );
 			        iframe.setAttribute( "frameborder", "0" );
 			        iframe.setAttribute( "allowfullscreen", "true" );
-                    //iframe.setAttribute("autoplay", "");
                     iframe.setAttribute("allow", "accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;");
                     iframe.setAttribute("loading", "lazy");
-			        //iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1");
                     iframe.setAttribute("src", "https://iframe.mediadelivery.net/embed/" + this.dataset.embed + "?autoplay=true");
 			        this.innerHTML = "";
 			        this.appendChild( iframe );
 	            });
             }
-
-            //navLinks.forEach(link => link.addEventListener("click", closeMenu));
 
             hamburger.addEventListener("click", displayMobileMenu);
             
@@ -316,10 +300,6 @@
                 optionsMenu.classList.toggle("active");
             }
 
-            // function closeMenu() {
-            //     hamburger.classList.remove("active");
-            //     optionsMenu.classList.remove("active");
-            // }
             function enrollNav() {
                 window.location.href = 'https://boundless-resource.com/purchase/?plan=4461';
             }
