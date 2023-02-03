@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="uef_landing_page_lazy_load_styles.css">
-        <link rel="icon" type="image/png" href="uef_landing_page_img/favicon.png">
+        <link rel="icon" type="image/webp" href="uef_landing_page_img/favicon.webp">
         <!-- Website share thumbnail setup -->
         <meta property='og:title' content='Boundless-Resource.com'/>
         <meta property='og:image' content='uef_landing_page_img/thumbnail.webp'/>
@@ -28,7 +28,7 @@
         <nav class="nav-bar">
             <div class="logo">
                 <div>
-                    <a href="https://boundless-resource.com/"><img style="height: 100%; width: 100%;" src="uef_landing_page_img/be_logo.png"></a>
+                    <a href="https://boundless-resource.com/"><img style="height: 100%; width: 100%;" src="uef_landing_page_img/be_logo.webp"></a>
                 </div>
             </div>
             <div class="options">
@@ -277,6 +277,7 @@
 	            // Load the image  
 	            var image = new Image();
 		        image.src = source;
+                image.setAttribute("loading", "lazy");
 		        image.addEventListener("load", function() {
 			        videos[ i ].appendChild( image );
 		        }(i));
