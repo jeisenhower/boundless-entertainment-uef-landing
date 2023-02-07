@@ -35,14 +35,14 @@
     <body>
 
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8TM7ND" height="0" width="0"
+        <noscript><iframe title="tag manager" src="https://www.googletagmanager.com/ns.html?id=GTM-P8TM7ND" height="0" width="0"
                 style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
         <nav class="nav-bar">
             <div class="logo">
                 <div>
-                    <a href="https://boundless-resource.com/"><img style="height: 100%; width: 100%;" src="uef_landing_page_img/be_logo.webp"></a>
+                    <a href="https://boundless-resource.com/"><img alt="Boundless Logo" style="height: 100%; width: 100%;" src="uef_landing_page_img/be_logo.webp"></a>
                 </div>
             </div>
             <div class="options">
@@ -95,7 +95,7 @@
             </div>
             <hr>
             <div id="video-container">
-                <iframe height="100%", width="100%" src="https://iframe.mediadelivery.net/embed/21811/9b134c0e-0eb3-49ad-a750-1ea3dcd39cf0?autoplay=true" loading="lazy" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+                <iframe height="100%", width="100%" title="Unreal Engine for Filmmakers Value Video" src="https://iframe.mediadelivery.net/embed/21811/9b134c0e-0eb3-49ad-a750-1ea3dcd39cf0?autoplay=true" loading="lazy" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
             </div>
             <button class="button" onclick="enrollNav()">ENROLL NOW</button>
             <div class="paragraph-container">
@@ -197,7 +197,7 @@
             <div class="testimonials-container">
                 <div class="testimonial-left">
                     <div class="thumbnail-container">
-                        <img class="testimonial-thumbnail" src="uef_landing_page_img/Jake-IG_v2.webp">
+                        <img class="testimonial-thumbnail" alt="Student Testimonial Jake" src="uef_landing_page_img/Jake-IG_v2.webp">
                     </div>
                     <div class="testimonial-text">
                         <p>
@@ -219,7 +219,7 @@
                 <div style="flex: 1 25px"></div>
                 <div class="testimonial-right">
                     <div class="thumbnail-container">
-                        <img class="testimonial-thumbnail" src="uef_landing_page_img/Hussin_LinkedIn_Fixed_v3.webp">
+                        <img class="testimonial-thumbnail" alt="Student Testimonial Hussin" src="uef_landing_page_img/Hussin_LinkedIn_Fixed_v3.webp">
                     </div>
                     <div class="testimonial-text">
                         <p>“I came across Sam’s YouTube channel while looking for VFX based Unreal Engine content. I was intrigued
@@ -292,6 +292,7 @@
 	            var image = new Image();
 		        image.src = source;
                 image.setAttribute("loading", "lazy");
+                image.setAttribute("alt", "Student Creation Video Thumbnail");
 		        image.addEventListener("load", function() {
 			        videos[ i ].appendChild( image );
 		        }(i));
@@ -302,6 +303,7 @@
 			        iframe.setAttribute( "allowfullscreen", "true" );
                     iframe.setAttribute("allow", "accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;");
                     iframe.setAttribute("loading", "lazy");
+                    iframe.setAttribute("title", "Student Creation");
                     iframe.setAttribute("src", "https://iframe.mediadelivery.net/embed/" + this.dataset.embed + "?autoplay=true");
 			        this.innerHTML = "";
 			        this.appendChild( iframe );
@@ -338,7 +340,7 @@
             }, 3000);
         </script>
         <noscript>
-            <img class="pixel" height="1" width="1" style="display:none"
+            <img alt="pixel" class="pixel" height="1" width="1" style="display:none"
                src="https://www.facebook.com/tr?id=458945659498620&ev=PageView&noscript=1"/>
         </noscript>
         <style nonce="gr4QlzpkSN">.pixel{display: none;}</style>
